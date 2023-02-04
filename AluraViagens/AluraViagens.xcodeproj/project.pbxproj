@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B115491298F164E007E77AA /* OfertaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11548F298F164E007E77AA /* OfertaTableViewCell.swift */; };
+		8B115492298F164E007E77AA /* OfertaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B115490298F164E007E77AA /* OfertaTableViewCell.xib */; };
+		8B115494298F1719007E77AA /* ViagemOfertaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B115493298F1719007E77AA /* ViagemOfertaViewModel.swift */; };
 		8B702907298C5AFB00E811E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B702906298C5AFB00E811E1 /* AppDelegate.swift */; };
 		8B702909298C5AFB00E811E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B702908298C5AFB00E811E1 /* SceneDelegate.swift */; };
 		8B70290B298C5AFB00E811E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70290A298C5AFB00E811E1 /* ViewController.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B11548F298F164E007E77AA /* OfertaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfertaTableViewCell.swift; sourceTree = "<group>"; };
+		8B115490298F164E007E77AA /* OfertaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfertaTableViewCell.xib; sourceTree = "<group>"; };
+		8B115493298F1719007E77AA /* ViagemOfertaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemOfertaViewModel.swift; sourceTree = "<group>"; };
 		8B702903298C5AFB00E811E1 /* AluraViagens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AluraViagens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B702906298C5AFB00E811E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B702908298C5AFB00E811E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B11548D298F1618007E77AA /* Destaque */ = {
+			isa = PBXGroup;
+			children = (
+				8B702925298D7F3100E811E1 /* ViagemTableViewCell.swift */,
+				8B702926298D7F3100E811E1 /* ViagemTableViewCell.xib */,
+			);
+			path = Destaque;
+			sourceTree = "<group>";
+		};
+		8B11548E298F1639007E77AA /* Ofertas */ = {
+			isa = PBXGroup;
+			children = (
+				8B11548F298F164E007E77AA /* OfertaTableViewCell.swift */,
+				8B115490298F164E007E77AA /* OfertaTableViewCell.xib */,
+			);
+			path = Ofertas;
+			sourceTree = "<group>";
+		};
 		8B7028FA298C5AFB00E811E1 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +150,7 @@
 			children = (
 				8B702936298D882900E811E1 /* ViagemViewModel.swift */,
 				8B702938298D88C500E811E1 /* ViagemDestaqueViewModel.swift */,
+				8B115493298F1719007E77AA /* ViagemOfertaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -142,8 +167,8 @@
 		8B702924298D7F1600E811E1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8B702925298D7F3100E811E1 /* ViagemTableViewCell.swift */,
-				8B702926298D7F3100E811E1 /* ViagemTableViewCell.xib */,
+				8B11548E298F1639007E77AA /* Ofertas */,
+				8B11548D298F1618007E77AA /* Destaque */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -228,6 +253,7 @@
 				8B702910298C5AFC00E811E1 /* Assets.xcassets in Resources */,
 				8B70290E298C5AFB00E811E1 /* Main.storyboard in Resources */,
 				8B702928298D7F3100E811E1 /* ViagemTableViewCell.xib in Resources */,
+				8B115492298F164E007E77AA /* OfertaTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +268,8 @@
 				8B70290B298C5AFB00E811E1 /* ViewController.swift in Sources */,
 				8B702932298D87A800E811E1 /* UIView+Extension.swift in Sources */,
 				8B702927298D7F3100E811E1 /* ViagemTableViewCell.swift in Sources */,
+				8B115494298F1719007E77AA /* ViagemOfertaViewModel.swift in Sources */,
+				8B115491298F164E007E77AA /* OfertaTableViewCell.swift in Sources */,
 				8B702920298C608300E811E1 /* HomeTableViewHeader.swift in Sources */,
 				8B702934298D87A800E811E1 /* TiposDeViagens.swift in Sources */,
 				8B702931298D87A800E811E1 /* DecodableData.swift in Sources */,
