@@ -23,6 +23,12 @@ class ViewController: UIViewController {
         viagensTableView.dataSource = self
         viagensTableView.delegate = self
     }
+    func irParaDestalhe(_ viagem: Viagem?) {
+        guard let viagemSelecionada = viagem else {return}
+        let detalheController = DetalheViewController.instanciar(viagemSelecionada)
+        
+        navigationController?.pushViewController(detalheController, animated: true)
+    }
 }
     
 
@@ -52,6 +58,8 @@ class ViewController: UIViewController {
                 
                 guard let celulaOferta = tableView.dequeueReusableCell(withIdentifier: "OfertaTableViewCell") as? OfertaTableViewCell else
                 {fatalError("Error to create tableViewCell") }
+                celulaOferta.delegate = self
+                celulaOferta.configuraCelula(viewModel?.viagens)
                 return celulaOferta
                 
             default:
@@ -61,6 +69,19 @@ class ViewController: UIViewController {
     }
 
 extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewModel = sessaoDeViagens?[indexPath.section]
+        
+        switch viewModel?.tipo {
+        case .destaques,.internacionais:
+            let viagemSelecionada = viewModel?.viagens[indexPath.row]
+            irParaDestalhe(viagemSelecionada)
+            
+        default: break
+        }
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             let headerView = Bundle.main.loadNibNamed("HomeTableViewHeader", owner: self, options: nil)?.first as! HomeTableViewHeader
@@ -81,5 +102,11 @@ extension ViewController: UITableViewDelegate {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 400 : 475
     }
     
+}
+
+extension ViewController: OfertaTableViewCellDelegate {
+    func didSelectView(_ viagem: Viagem?) {
+        irParaDestalhe(viagem)
+    }
 }
 

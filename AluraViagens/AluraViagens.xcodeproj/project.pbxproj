@@ -27,6 +27,8 @@
 		8B702934298D87A800E811E1 /* TiposDeViagens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70292F298D87A800E811E1 /* TiposDeViagens.swift */; };
 		8B702937298D882900E811E1 /* ViagemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B702936298D882900E811E1 /* ViagemViewModel.swift */; };
 		8B702939298D88C500E811E1 /* ViagemDestaqueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B702938298D88C500E811E1 /* ViagemDestaqueViewModel.swift */; };
+		8BC1D2F0298F45CC001B2699 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1D2EE298F45CC001B2699 /* DetalheViewController.swift */; };
+		8BC1D2F1298F45CC001B2699 /* DetalheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC1D2EF298F45CC001B2699 /* DetalheViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		8B70292F298D87A800E811E1 /* TiposDeViagens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiposDeViagens.swift; sourceTree = "<group>"; };
 		8B702936298D882900E811E1 /* ViagemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemViewModel.swift; sourceTree = "<group>"; };
 		8B702938298D88C500E811E1 /* ViagemDestaqueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemDestaqueViewModel.swift; sourceTree = "<group>"; };
+		8BC1D2EE298F45CC001B2699 /* DetalheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewController.swift; sourceTree = "<group>"; };
+		8BC1D2EF298F45CC001B2699 /* DetalheViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalheViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 			children = (
 				8B702924298D7F1600E811E1 /* Cells */,
 				8B702923298D72B500E811E1 /* Header */,
+				8BC1D2ED298F45A4001B2699 /* DetalheViewController */,
 				8B70290C298C5AFB00E811E1 /* Main.storyboard */,
 				8B70290A298C5AFB00E811E1 /* ViewController.swift */,
 			);
@@ -187,6 +192,15 @@
 				8B70292D298D87A800E811E1 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8BC1D2ED298F45A4001B2699 /* DetalheViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8BC1D2EE298F45CC001B2699 /* DetalheViewController.swift */,
+				8BC1D2EF298F45CC001B2699 /* DetalheViewController.xib */,
+			);
+			path = DetalheViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC1D2F1298F45CC001B2699 /* DetalheViewController.xib in Resources */,
 				8B702913298C5AFC00E811E1 /* LaunchScreen.storyboard in Resources */,
 				8B702930298D87A800E811E1 /* server-response.json in Resources */,
 				8B70291E298C5E7600E811E1 /* HomeTableViewHeader.xib in Resources */,
@@ -276,6 +291,7 @@
 				8B702907298C5AFB00E811E1 /* AppDelegate.swift in Sources */,
 				8B702909298C5AFB00E811E1 /* SceneDelegate.swift in Sources */,
 				8B702937298D882900E811E1 /* ViagemViewModel.swift in Sources */,
+				8BC1D2F0298F45CC001B2699 /* DetalheViewController.swift in Sources */,
 				8B702939298D88C500E811E1 /* ViagemDestaqueViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,37 +1,46 @@
 //
-//  ViagemTableViewCell.swift
+//  DetalheViewController.swift
 //  AluraViagens
 //
-//  Created by Cleber Neto on 03/02/23.
+//  Created by Cleber Neto on 04/02/23.
 //
 
 import UIKit
 
-class ViagemTableViewCell: UITableViewCell {
-
-//MARK: IBOutlets
+class DetalheViewController: UIViewController {
     
-    
-    @IBOutlet weak var backgroundViewCell: UIView!
+    //MARK: - IBOutlets
     
     @IBOutlet weak var viagemImage: UIImageView!
     
-    @IBOutlet weak var tituloViagemLabel: UILabel!
     
+    @IBOutlet weak var tituloViagemLabel: UILabel!
     
     @IBOutlet weak var subtituloViagemLabel: UILabel!
     
+    @IBOutlet weak var precoSemDescontoLabel : UILabel!
+    
     @IBOutlet weak var diariaViagemLabel: UILabel!
     
-    
-    @IBOutlet weak var precoSemDescontoLabel: UILabel!
-        
     @IBOutlet weak var precoViagemLabel: UILabel!
     
-    @IBOutlet weak var statusCancelamentoViagemLabel: UILabel!
+    //MARK: - atributos
     
-    func configuraCelula(_ viagem: Viagem?) {
+    var viagem: Viagem?
+    
+    class func instanciar(_ viagem: Viagem ) -> DetalheViewController {
+        let detalhesViewController = DetalheViewController(nibName: String(describing: self), bundle: nil)
+        detalhesViewController.viagem = viagem
         
+        return detalhesViewController
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configuraView()
+    }
+    
+    func configuraView() {
         viagemImage.image = UIImage(named: viagem?.asset ?? "")
         
         tituloViagemLabel.text = viagem?.titulo
@@ -50,10 +59,12 @@ class ViagemTableViewCell: UITableViewCell {
             diariaViagemLabel.text = "\(numeroDeDias) \(diarias) - \(numeroDeHospedes) \(hospedes)"
             
         }
+    }
         
-        DispatchQueue.main.async {
-            self.backgroundViewCell.addSombra()
+        //MARK: - Actions
+        
+        @IBAction func voltarButton(_ sender: UIButton) {
+            navigationController?.popViewController(animated: true)
         }
         
-    }
 }
